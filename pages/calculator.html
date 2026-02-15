@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator - EcoTrackr</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Carbon Footprint Calculator (India)</h1>
+        <p class="subtitle">Estimate your carbon footprint based on lifestyle and consumption habits</p>
+
+        <!-- 1. Transportation -->
+        <div class="section">
+            <h2>1. Transportation</h2>
+
+            <label for="transport">Mode of Transport:</label>
+            <select id="transport">
+                <option value="0">Walking / Cycling</option>
+                <option value="0.05">Metro</option>
+                <option value="0.08">Bus</option>
+                <option value="0.10">Bike</option>
+                <option value="0.12">Car</option>
+                <option value="0.15">Cab (Ola/Uber)</option>
+            </select>
+
+            <label for="distance">Distance Travelled per Day (km):</label>
+            <input type="number" id="distance" placeholder="Enter distance in km">
+        </div>
+
+        <!-- 2. Home Energy -->
+        <div class="section">
+            <h2>2. Home Energy Usage</h2>
+
+            <label for="ac">AC Usage (hours per day):</label>
+            <input type="number" id="ac" placeholder="e.g. 4">
+
+            <label for="fan">Fan Usage (hours per day):</label>
+            <input type="number" id="fan" placeholder="e.g. 10">
+
+            <label for="geyser">Geyser Usage (hours per day):</label>
+            <input type="number" id="geyser" placeholder="e.g. 1">
+        </div>
+
+        <!-- 3. Food -->
+        <div class="section">
+            <h2>3. Food Habits</h2>
+
+            <label for="diet">Diet Type:</label>
+            <select id="diet">
+                <option value="1.5">Vegetarian</option>
+                <option value="2.0">Eggetarian</option>
+                <option value="2.8">Non-Vegetarian</option>
+                <option value="1.2">Vegan</option>
+            </select>
+        </div>
+
+        <!-- 4. Cooking Fuel -->
+        <div class="section">
+            <h2>4. Cooking Fuel</h2>
+
+            <label for="fuel">Primary Cooking Fuel:</label>
+            <select id="fuel">
+                <option value="2.0">LPG Gas</option>
+                <option value="1.6">PNG Gas</option>
+                <option value="1.2">Induction / Electric</option>
+            </select>
+        </div>
+
+        <!-- 5. Flight Travel -->
+        <div class="section">
+            <h2>5. Flight Travel</h2>
+
+            <label for="flights">Number of Flights per Year:</label>
+            <input type="number" id="flights" placeholder="e.g. 2">
+        </div>
+
+        <!-- 6. Online Shopping -->
+        <div class="section">
+            <h2>6. Online Shopping</h2>
+
+            <label for="shopping">Online Orders per Month:</label>
+            <input type="number" id="shopping" placeholder="e.g. 5">
+        </div>
+
+        <button onclick="calculateFootprint()">Calculate Carbon Footprint</button>
+
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <script src="../js/calculator.js"></script>
+</body>
+</html>
